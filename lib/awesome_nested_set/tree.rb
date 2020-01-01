@@ -21,6 +21,8 @@ module CollectiveIdea #:nodoc:
 
           root_nodes.each do |root_node|
             # setup index for this scope
+            puts "===========#{root_node}=============="
+            puts "============#{root_node.try(:id)}================"
             indices[scope_for_rebuild.call(root_node)] ||= 0
             set_left_and_rights(root_node)
             reset_counter_cache(root_node)
